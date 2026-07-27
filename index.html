@@ -1,14 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>ОО Живи</title>
+    <title>Живи</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 
     <meta name="description"
           content="Общественная организация Живи">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href=""><!--указать позже-->
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="icons/favicon.png" type="image/x-icon">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -18,7 +25,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body>
+
 <!--Header-->
 
 <header class="border-bottom">
@@ -73,14 +81,20 @@
 <!--Navbar-->
 
 <div class="container mt-3">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper bg-success">
 
         <ul class="nav justify-content-center fw-bold">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">О нас</a>
+                <a class="nav-link text-white" href="#">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Чем мы помогаем</a>
+                <a class="nav-link text-white" href="aboutUs.html">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="aboutUs.html">Наша команда</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#howWeHelp">Чем мы помогаем</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="#">Как получить помощь</a>
@@ -176,7 +190,7 @@
 
 <!--Чем мы помогаем-->
 
-<h2 class="text-center mb-4 fw-bold together m-3 p-3">ЧЕМ МЫ ПОМОГАЕМ</h2>
+<h2 class="text-center mb-4 fw-bold together m-3 p-3" id="howWeHelp">ЧЕМ МЫ ПОМОГАЕМ</h2>
 
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-5">
@@ -562,6 +576,117 @@
         </div>
     </div>
 
+<!-- КОНТАКТЫ -->
+<section id="contacts" class="py-5 bg-light">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Контакты
+        </h2>
+
+        <div class="row g-4 align-items-center">
+
+            <!-- КАРТА -->
+            <div class="col-lg-9">
+
+                <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+                    <iframe
+                            src="img/map.png"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="d-flex gap-3 mt-3">
+
+                    <a href="https://yandex.md/maps/-/CTf3eS15"
+                       target="_blank"
+                       class="btn btn-dark">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Яндекс Карты
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/hHtGGGiTGszc2ZJ8A"
+                       target="_blank"
+                       class="btn btn-outline-dark">
+                        <i class="bi bi-google"></i>
+                        Google Карты
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ИНФОРМАЦИЯ -->
+            <div class="col-lg-3">
+
+                <h4 class="fw-bold mb-4">
+                    Общественная организация «Живи»
+                </h4>
+
+
+                <div class="mb-3">
+                    <h6 class="fw-bold">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        Телефон
+                    </h6>
+
+                    <p class="text-secondary">
+                        +373 775 630 31
+                    </p>
+                </div>
+
+
+                <div class="mb-3">
+                    <h6 class="fw-bold">
+                        <i class="bi bi-geo-alt-fill me-2"></i>
+                        Адрес
+                    </h6>
+
+                    <p class="text-secondary">
+                        г. Тирасполь, адрес организации
+                    </p>
+                </div>
+
+
+                <div class="mb-3">
+                    <h6 class="fw-bold">
+                        <i class="bi bi-envelope-fill me-2"></i>
+                        Email
+                    </h6>
+
+                    <p class="text-secondary">
+                        Jivi_nvd@mail.ru
+                    </p>
+                </div>
+
+
+                <div>
+                    <h6 class="fw-bold mb-3">
+                        Мы в социальных сетях
+                    </h6>
+
+                    <div class="d-flex gap-3">
+
+                        <a href="https://www.instagram.com/vika_zudnia?igsh=MTg4NHFieWpuamlzYQ==" class="fs-3 text-dark">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- footer -->
 
 <footer class="bg-dark text-white pt-5 pb-3">
@@ -611,13 +736,6 @@
             </div>
 
             <!-- 4 КОЛОНКА -->
-            <div class="col-lg-2 col-md-6 col-12">
-                <h5 class="fw-bold mb-3">Справочная информация</h5>
-
-                <p class="text-secondary mb-1">Часто задаваемые вопросы</p>
-                <p class="text-secondary mb-1">Документы</p>
-                <p class="text-secondary">Помощь пациентам</p>
-            </div>
 
             <!-- 5 КОЛОНКА -->
             <div class="col-lg-3 col-md-6 col-12">
@@ -640,6 +758,8 @@
 
     </div>
 </footer>
+
+
 
 
 <!--<script src="js/tires.js"></script>

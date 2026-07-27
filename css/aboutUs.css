@@ -1,0 +1,22 @@
+section{
+    font-family: 'Montserrat', sans-serif;
+    color:#2f3a33;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Playfair Display', serif;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.motto{
+    font-family:'Marck Script', cursive;
+    font-size:3rem;
+    color:#4F8A5B;
+}
+
+.nav-wrapper {
+  /*background-color: #77b52e;*/   /* зелёный */
+  border-radius: 40px;
+  padding: 10px 20px;
+}
