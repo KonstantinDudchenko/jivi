@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Получить помощь</title>
+  <style>
+    :root { --accent:#b72a63; --ink:#1e2330; --line:#d8dce5; }
+    body { margin:0; font:16px/1.45 Arial,sans-serif; color:var(--ink); background:#faf8fb; }
+    main { max-width:720px; margin:40px auto; padding:24px; }
+    .card { background:white; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 8px 30px #28132b0a; }
+    h1 { margin-top:0; } label { display:block; margin:16px 0 6px; font-weight:600; }
+    input, select, textarea { box-sizing:border-box; width:100%; padding:12px; border:1px solid var(--line); border-radius:9px; font:inherit; }
+    textarea { min-height:110px; resize:vertical; }
+    .consent { display:flex; gap:9px; align-items:flex-start; font-size:14px; }
+    .consent input { width:auto; margin-top:4px; } .consent label { margin:0; font-weight:400; }
+    button { margin-top:20px; border:0; border-radius:9px; padding:13px 20px; background:var(--accent); color:white; font:inherit; font-weight:700; cursor:pointer; }
+    button:disabled { opacity:.65; cursor:wait; } #notice { margin-top:16px; } .ok { color:#146c43; } .fail { color:#a61b39; }
+  </style>
+</head>
+<body>
+  <main><section class="card">
+    <h1>Заявка на помощь</h1>
+    <p>Заполните форму — мы свяжемся с вами в ближайшее время.</p>
+
+    <!-- ВСТАВЬТЕ сюда URL развёрнутого Apps Script (оканчивается на /exec). -->
+    <form id="helpForm" action="https://script.google.com/macros/s/AKfycbxOy86IQDJ1jhfGZEofuCzKpArHLZn6mziRtkeBGe5uQ5Ysmmjpig7ifc6biXMjoyE/exec" method="post" target="requestFrame">
+      <label for="helpType">Вид необходимой помощи</label>
+      <select id="helpType" name="helpType" required>
+        <option value="">Выберите вид помощи</option>
+        <option>Помощь юриста</option><option>Помощь психолога</option>
+        <option>Медицинское оборудование</option><option>Помощь в приобретении лекарств</option>
+        <option>Бесплатная йога</option><option>Бесплатный фитнес</option>
+        <option>Продуктовая корзина</option><option>Бесплатное такси</option>
+        <option>«Я жива» — бесплатные стрижки</option>
+      </select>
+      <label for="fullName">ФИО</label><input id="fullName" name="fullName" autocomplete="name" required>
+      <label for="phone">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="city">Город</label><input id="city" name="city" autocomplete="address-level2" required>
+      <label for="description">Кратко опишите ситуацию</label><textarea id="description" name="description"></textarea>
+      <p class="consent"><input id="consent" name="consent" value="yes" type="checkbox" required><label for="consent">Я даю согласие на обработку персональных данных и принимаю <a href="/privacy.html" target="_blank">политику конфиденциальности</a>.</label></p>
+      <button type="submit">Отправить заявку</button>
+    </form>
+    <iframe name="requestFrame" title="Результат отправки" hidden></iframe>
+    <div id="notice" role="status" aria-live="polite"></div>
+  </section></main>
+  <script>
+    // Позволяет ссылке из карточки передать вид помощи:
+    // zayavka.html?help=Бесплатное%20такси
+    const type = new URLSearchParams(location.search).get('help');
+    if (type) document.querySelector('#helpType').value = type;
+
+    const form = document.querySelector('#helpForm');
+    const button = form.querySelector('button');
+    const notice = document.querySelector('#notice');
+    form.addEventListener('submit', () => { button.disabled = true; button.textContent = 'Отправляем…'; });
+    window.addEventListener('message', event => {
+      if (event.data?.type !== 'help-request') return;
+      button.disabled = false; button.textContent = 'Отправить заявку';
+      if (event.data.status === 'success') {
+        form.reset();
+        notice.className = 'ok';
+        notice.textContent = 'Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.';
+      } else {
+        notice.className = 'fail';
+        notice.textContent = 'Не удалось отправить заявку. Попробуйте позже или позвоните нам.';
+      }
+    });
+  </script>
+</body>
+</html>
