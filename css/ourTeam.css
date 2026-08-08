@@ -1,0 +1,95 @@
+        body{
+            background:#f8f9fa;
+        }
+
+        .team-header{
+            background:linear-gradient(205deg,#C71585,#6f42c1);
+            color:white;
+            padding:80px 0;
+        }
+
+        .team-card{
+            border:none;
+            border-radius:18px;
+            overflow:hidden;
+            transition:.3s;
+            box-shadow:0 8px 25px rgba(0,0,0,.08);
+        }
+
+        .team-card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 15px 35px rgba(0,0,0,.15);
+        }
+
+        .team-photo{
+            width:170px;
+            height:170px;
+            object-fit:cover;
+            border-radius:50%;
+            margin:30px auto 15px;
+            border:5px solid #ffffff;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+        }
+
+        .team-role{
+            color:#4CAF50;
+            font-weight:600;
+        }
+
+        .section-title{
+            font-weight:700;
+        }
+
+        .modal-content{
+    background:transparent;
+    box-shadow:none;
+}
+
+.modal-body{
+    padding:0;
+}
+
+#modalImage{
+    max-height:90vh;
+    width:auto;
+    border-radius:15px;
+}
+
+.btn-close{
+background-color: #E9DDF5;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin: 0 5px;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 21px;
+
+    transition: 0.3s;
+}
+
+.social-link.instagram {
+    color: #9B72AA;
+    background-color: #F5EFFA;
+}
+
+.social-link.telegram {
+    color: #9B72AA;
+    background-color: #F5EFFA;
+}
+
+.social-link:hover {
+    color: #ffffff;
+    background-color: #9B72AA;
+    transform: translateY(-3px);
+}
