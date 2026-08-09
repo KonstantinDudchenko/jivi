@@ -1,0 +1,95 @@
+/* Карточки */
+
+        .help-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(80, 60, 90, 0.08);
+
+            height: 100%;
+        }
+
+
+        .help-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 50%;
+
+            background-color: #F5EFFA;
+            color: #9B72AA;
+
+            font-size: 30px;
+        }
+
+
+        .help-card h3 {
+            color: #5E4770;
+        }
+
+
+        /* QR-код */
+
+        .qr-code {
+            max-width: 280px;
+            width: 100%;
+
+            border-radius: 15px;
+
+            padding: 10px;
+
+            background: #ffffff;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* Кнопки */
+
+        .btn-help {
+            background-color: #9B72AA;
+            border-color: #9B72AA;
+            color: #ffffff;
+        }
+
+
+        .btn-help:hover {
+            background-color: #79558A;
+            border-color: #79558A;
+            color: #ffffff;
+        }
+
+
+        /* Список помощи */
+
+        .help-list {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        .help-list li {
+            padding: 10px 0;
+        }
+
+
+        .help-list i {
+            color: #9B72AA;
+            margin-right: 10px;
+        }
+
+
+        /* Реквизиты */
+
+        .details-box {
+            background-color: #F5EFFA;
+            border-radius: 15px;
+            padding: 25px;
+        }
