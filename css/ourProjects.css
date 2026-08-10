@@ -1,0 +1,120 @@
+body {
+            background-color: #F8F6FA;
+        }
+
+        /* =========================
+           КАРТОЧКА ПРОЕКТА
+        ========================= */
+
+        .project-card {
+            background: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+
+            height: 100%;
+
+            box-shadow: 0 8px 25px rgba(80, 60, 90, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 15px 35px rgba(80, 60, 90, 0.14);
+        }
+
+
+        /* =========================
+           ИКОНКА
+        ========================= */
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #F5EFFA;
+            color: #9B72AA;
+
+            font-size: 28px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           НАЗВАНИЕ
+        ========================= */
+
+        .project-title {
+            color: #5E4770;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           НОМЕР
+        ========================= */
+
+        .project-number {
+            color: #CDB4DB;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           СТАТУС
+        ========================= */
+
+        .project-status {
+            display: inline-block;
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            background-color: #F5EFFA;
+            color: #9B72AA;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           БЛОК В РАЗРАБОТКЕ
+        ========================= */
+
+        .project-card.development {
+            background-color: #FCFAFD;
+        }
+
+
+        .project-card.development .project-icon {
+            background-color: #F0ECF2;
+            color: #8C7B94;
+        }
+
+
+        .project-card.development .project-status {
+            background-color: #EEEAF0;
+            color: #756A79;
+        }
+
+
+        /* =========================
+           ВСТУПИТЕЛЬНЫЙ БЛОК
+        ========================= */
+
+        .projects-intro {
+            max-width: 850px;
+            margin: 0 auto 50px;
+        }

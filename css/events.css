@@ -1,0 +1,74 @@
+/* Общий фон страницы */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Один блок мероприятия */
+.event-section {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Фотографии */
+.event-carousel,
+.event-carousel img {
+    height: 420px;
+}
+
+.event-carousel img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Правая часть */
+.event-content {
+    padding: 35px;
+}
+
+/* Заголовок */
+.event-title {
+    color: #2d6a4f;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Информация */
+.event-info {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.event-info div {
+    margin-bottom: 8px;
+}
+
+.event-info i {
+    color: #6c6c93;
+    margin-right: 8px;
+}
+
+/* Описание */
+.event-description {
+    color: #495057;
+    line-height: 1.7;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+
+    .event-carousel,
+    .event-carousel img {
+        height: 280px;
+    }
+
+    .event-content {
+        padding: 25px;
+    }
+
+    .event-title {
+        font-size: 1.5rem;
+    }
+}
